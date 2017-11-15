@@ -1,14 +1,22 @@
 <h1>Demo pages </h1>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<button type="button" class="test_1">Go</button>
+<button type="button" class="test_1">Facebook App installed</button>
+<button type="button" class="test_2">App not installed</button>
 <script type="text/javascript">$(document).ready(function() {
-    $("button").click(function(e){
+    $(".test_1").click(function(e){
       location.href = "fb://";
         setTimeout (function () {
           location.href = "itmss: //itunes.apple.com/us/app/kanji-master-skill-học-kanji-thật-dễ/id1205244840?l=vi&ls=1&mt=8";
         }, 500);      
     });
+        
+    $(".test_2").click(function(e){
+      location.href = "notfb://";
+        setTimeout (function () {
+          location.href = "itmss: //itunes.apple.com/us/app/kanji-master-skill-học-kanji-thật-dễ/id1205244840?l=vi&ls=1&mt=8";
+        }, 500);      
+    });    
   }
  );
   </script>
