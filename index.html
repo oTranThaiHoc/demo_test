@@ -1,40 +1,9 @@
-			
-			<div style="width: 0; height: 0; overflow: hidden;">
-				<iframe id="launch_frame" name="launch_frame"> </iframe>
-			</div>
-			
-			<a href="公式サイトのURLとかここに入れるべし！">サイトを開く</a>
-			
-			<script>
-				// アプリを開く。アプリがインストールされていなければサイトを開く。
-				function launchApp() {
-					var IOS_SCHEME = 'ekispert://jp.co.val.ekispert/';
-					var IOS_STORE = 'https://itunes.apple.com/jp/app/%E9%A7%85%E3%81%99%E3%81%B1%E3%81%82%E3%81%A8/id875750302?mt=8';
-					var ANDROID_SCHEME = 'AndroidのURLスキームをここに入れるべし！';
-					var ANDROID_PACKAGE = 'Androidのパッケージ名をここに入れるべし！';
-					var PC_SITE = 'https://roote.ekispert.net/ja/'
-					
-					var userAgent = navigator.userAgent.toLowerCase();
-					// iPhone端末ならアプリを開くかApp Storeを開く。
-					if (userAgent.search(/iphone|ipad|ipod/) > -1) {
-						launch_frame.location.href = IOS_SCHEME + '://';
-						setTimeout(function() {
-								   location.href = IOS_STORE;
-								   }, 500);
-					}
-					// Android端末ならアプリを開くかGoogle Playを開く。
-					else if (userAgent.search(/android/) > -1) {
-						document.location = 'intent://#Intent;scheme=' + ANDROID_SCHEME
-						+ ';package=' + ANDROID_PACKAGE + ';end';
-					}
-					// その他・不明・PCなどの場合はサイトを開く。
-					else {
-						document.location = PC_SITE;
-					}
-				}
-			
-			// ページ読み込み時に実行
-			window.onload = function() {
-				launchApp();
-			}
-			</script>
+<!DOCTYPE html><html><meta charset="UTF-8">
+<head>
+<title>拡張スキーム動作確認</title>
+</head>
+<body>
+<a href="com-access-launch-app://?ios_scheme=ekispert://&amp;ios_store=https://itunes.apple.com/jp/app/id463431091&amp;android_package=jp.co.val.expert.android.aio&amp;android_scheme=ekispert://?xxx=xxxxx">ログイン/ログアウト</a><br/>
+
+</body>
+</html>
